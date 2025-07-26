@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Benimle Olur musun?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #ffe6f0;
+    }
+
+    h1 {
+      color: #cc0066;
+    }
+
+    button {
+      padding: 15px 30px;
+      margin: 20px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .yes {
+      background-color: #ff4da6;
+      color: white;
+    }
+
+    .no {
+      background-color: #999;
+      color: white;
+    }
+
+    .heart {
+      font-size: 50px;
+      animation: pop 0.6s infinite alternate;
+    }
+
+    @keyframes pop {
+      from { transform: scale(1); }
+      to { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Benimle sevgili olur musun? 💕</h1>
+
+  <button class="yes" onclick="sayYes()">Evet</button>
+  <button class="no" onclick="sayNo()">Hayır</button>
+
+  <div id="result"></div>
+
+  <script>
+    function sayYes() {
+      document.getElementById("result").innerHTML = `
+        <h2>Seni seviyorum ❤️</h2>
+        <div class="heart">💖💖💖</div>
+      `;
+    }
+
+    function sayNo() {
+      alert("Bu seçeneği seçme! 😠");
+    }
+  </script>
+
+</body>
+</html>
